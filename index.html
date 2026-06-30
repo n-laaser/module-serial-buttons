@@ -10,10 +10,10 @@
     />
     <meta
       name="description"
-      content="A WebSerial module for live serial comms with stations"
+      content="A WebSerial module for sending Button inputs to live stations"
     />
     <meta name="show-in" content="station" />
-    <title>Live WebSerial</title>
+    <title>Serial Buttons/title>
 
     <!-- Edrys module -->
     <script src="https://edrys-labs.github.io/module/edrys.js"></script>
@@ -60,7 +60,17 @@
 
     <!-- Terminal container -->
     <div id="terminal"></div>
-
+    <div id="controls">
+        <button id="up">↑ Up</button>
+      </div>
+        <button id="left">←</button>
+        <button id="jiggle">Jiggle</button>
+        <button id="right">→</button>
+      </div>
+        <button id="down">↓</button>
+        <button id="reset">R</button>
+    </div>
+  
     <script type="module">
       import { FitAddon } from './xterm/xterm-addon-fit.js'
 
@@ -105,6 +115,23 @@
       term.onKey((e) => {
         Edrys.sendMessage('w', e.key)
       })
+      // Button Event Handlers
+      document.getElementById("up").onclick = () =>
+          Edrys.sendMessage("w", "u");
+
+      document.getElementById("down").onclick = () =>
+          Edrys.sendMessage("w", "d");
+      
+      document.getElementById("left").onclick = () =>
+          Edrys.sendMessage("w", "l");
+      
+      document.getElementById("right").onclick = () =>
+          Edrys.sendMessage("w", "r");
+      
+      document.getElementById("jiggle").onclick = () =>
+          Edrys.sendMessage("w", "j");
+      document.getElementbcId("reset").onclick = () =>
+          Edrys.sendMessage("w", "z");
 
       Edrys.onMessage(({ from, subject, body }) => {
         if (subject == 'r') {
