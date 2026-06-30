@@ -1,4 +1,4 @@
-# Edrys Serial Buttons Module
+# Edrys Serial Buttons Module (IN DEVELOPMENT)
 This module is based in the Serial Module (https://github.com/edrys-labs/module-serial) but changes the input from a terminal to Buttons. The standard layout is similiar to a game controller. (up, down, left, right, and 2 additional buttons)
 This module uses WebSerial to allow access to a live serial terminal hosted by a station. It is useful for creating Remote Labs (eg. allowing students to access an Arduino serial terminal remotely).
 
