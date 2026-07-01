@@ -10,7 +10,7 @@ Currently [not all browsers support WebSerial](https://caniuse.com/web-serial), 
 Simply use this URL to add the module to your class:
 
 ```
-https://edrys-labs.github.io/module-serial-buttons/
+https://n-laaser.github.io/module-serial-buttons/
 ```
 
 This module only works in stations (not normal Edrys rooms), so launch a station and join it to start. You will need to set a baud rate and connect at the station end.
