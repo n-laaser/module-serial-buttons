@@ -267,21 +267,28 @@
         }
       })
     </script>
-
+    
     <style>
-      body,
-      html,
-      #terminal,
-      .terminal {
+    html, body {
         height: 100%;
-        width: 100%;
-        max-width: 100%;
         margin: 0;
-        padding: 0;
-      }
-      body {
+    }
+    
+    body {
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
-      }
+    }
+    
+    #terminal {
+        flex: 1;
+        width: 100%;
+        min-height: 0;
+    }
+    
+    #controls {
+        padding: 10px;
+    }
     </style>
   </body>
 </html>
